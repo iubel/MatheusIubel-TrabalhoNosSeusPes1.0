@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF0D161A">
+        <Label Content="Loja NosSeusPes" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="53" Width="376" FontSize="36" FontFamily="Snap ITC" Cursor="Arrow">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF00ABDF"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="Deseja Cadastrar ou listar algo?" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Height="42" Width="341" Foreground="#FF00536C" FontSize="16" FontFamily="Sigmar One"/>
+        <RadioButton x:Name="RB_Cadastrar" IsChecked="True" Click="CadastrarRB_Checked" Content="Cadastrar" HorizontalAlignment="Left" Margin="356,74,0,0" VerticalAlignment="Top" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16" Background="Transparent" BorderBrush="#FF00536C"/>
+        <RadioButton x:Name="RB_Listar" Click="ListarRB_Checked" Content="Listar" HorizontalAlignment="Left" Margin="495,74,0,0" VerticalAlignment="Top" Foreground="#FF005366" FontFamily="Sigmar One" FontSize="16" Background="Transparent" BorderBrush="#FF00536C"/>
+        <Grid x:Name="GridCadastrar" HorizontalAlignment="Left" Height="100" Margin="10,180,0,0" VerticalAlignment="Top" Width="774">
+            <Button Click="BTN_Cliente" Content="Cliente" HorizontalAlignment="Left" Margin="150,35,0,0" VerticalAlignment="Top" Width="109" Background="#FF0C161A" Foreground="#FF00536C" BorderBrush="#FF0C161A" FontFamily="Sigmar One" FontSize="18"/>
+            <Button Click="BTN_Pedido" Content="Pedido" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" Width="94" Background="#FF0D161A" BorderBrush="#FF0D161A" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="18"/>
+            <Button Click="BTN_Sapato" Content="Sapato" HorizontalAlignment="Right" Margin="0,35,150
+                    ,0" VerticalAlignment="Top" Width="98" Background="#FF0D161A" BorderBrush="#FF0D161A" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="18"/>
+        </Grid>
+        <Grid Visibility="Hidden" x:Name="GridListar" HorizontalAlignment="Left" Height="100" Margin="10,180,0,0" VerticalAlignment="Top" Width="774">
+            <Button Click="BTN_Estoque" Content="Estoque" HorizontalAlignment="Left" Margin="230,34,0,0" VerticalAlignment="Top" Width="113" Background="#FF0D161A" Foreground="#FF00536C" BorderBrush="#FF0D161A" FontFamily="Sigmar One" FontSize="18"/>
+            <Button Click="BTN_Sapatos" Content="Sapatos" HorizontalAlignment="Right" Margin="0,34,230,0" VerticalAlignment="Top" Width="106" FontFamily="Sigmar One" FontSize="18" Foreground="#FF00536C" BorderBrush="#FF0D161A" Background="#FF0D161A"/>
+        </Grid>
+
+    </Grid>
+</Window>

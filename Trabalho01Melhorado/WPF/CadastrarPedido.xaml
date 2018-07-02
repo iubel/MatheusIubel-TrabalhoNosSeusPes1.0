@@ -1,0 +1,79 @@
+﻿<Window x:Class="WPF.CadastrarPedido"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="CadastrarPedido" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid Background="#FF0D161A">
+        <Label Content="Cadastrar Pedido" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="#00000000" FontFamily="Snap ITC" FontSize="36">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF00ABDF"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button Click="BTN_Voltar" Content="Voltar" HorizontalAlignment="Left" Margin="50,370,0,0" VerticalAlignment="Top" Width="84" Background="#00DDDDDD" Foreground="#FF00536C" BorderBrush="#00707070" FontFamily="Sigmar One" FontSize="16"/>
+        <Button Click="BTN_Limpar" Content="Limpar" HorizontalAlignment="Center" Margin="359,370,351.6,0" VerticalAlignment="Top" Width="83" Background="#00DDDDDD" Foreground="#FF00536C" BorderBrush="#00707070" FontFamily="Sigmar One" FontSize="16"/>
+        <Label Content="Modelo:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+        <ComboBox x:Name="cboModelos" HorizontalAlignment="Left" Margin="144,81,0,0" VerticalAlignment="Top" Width="640" BorderBrush="#FF00536C" Foreground="#FF00536C">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#00E5E5E5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Quantidade:" HorizontalAlignment="Left" Margin="3,150,0,0" VerticalAlignment="Top" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+        <Label Content="Tamanho:" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+        <Label Content="Preço UN:" HorizontalAlignment="Left" Margin="2,186,0,0" VerticalAlignment="Top" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+        <Label Content="Preço total:" HorizontalAlignment="Left" Margin="2,228,0,0" VerticalAlignment="Top" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+        <Label Content="Cliente:" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+        <TextBox x:Name="txtPrecoUN" HorizontalAlignment="Left" Height="23" Margin="144,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="640" Background="Transparent" SelectionBrush="#FF00536C" Foreground="#FF00536C"/>
+        <TextBox x:Name="txtPrecoTT" HorizontalAlignment="Left" Height="23" Margin="144,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="640" Background="Transparent" Foreground="#FF00536C" SelectionBrush="#FF00536C"/>
+        <RadioButton Click="Click_PessoaFisica" IsChecked="True" x:Name="RB_PessoaFisica" Content="Pessoa Física" HorizontalAlignment="Left" Margin="155,274,0,0" VerticalAlignment="Top" Background="#00000000" BorderBrush="#FF00536C" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+        <RadioButton Click="Click_PessoaJuridica" x:Name="RB_PessoaJuridica" Content="Pessoa Jurídica" HorizontalAlignment="Left" Margin="376,274,0,0" VerticalAlignment="Top" Foreground="#FF00536C" BorderBrush="#FF00536C" Background="Transparent" FontFamily="Sigmar One" FontSize="16"/>
+        <CheckBox x:Name="CheckBox38" Checked="CheckBox38_Checked" Unchecked="CheckBox38_Unchecked" Content="38" HorizontalAlignment="Left" Margin="145,131,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FF00536C" FontFamily="Sigmar One" BorderBrush="#FF00536C"/>
+        <CheckBox x:Name="CheckBox39" Checked="CheckBox39_Checked" Unchecked="CheckBox39_Unchecked" Content="39" HorizontalAlignment="Left" Margin="194,131,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FF00536C" FontFamily="Sigmar One" BorderBrush="#FF00536C"/>
+        <CheckBox x:Name="CheckBox40" Checked="CheckBox40_Checked" Unchecked="CheckBox40_Unchecked" Content="40" HorizontalAlignment="Left" Margin="241,131,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FF00536C" FontFamily="Sigmar One" BorderBrush="#FF00536C"/>
+        <CheckBox x:Name="CheckBox41" Checked="CheckBox41_Checked" Unchecked="CheckBox41_Unchecked" Content="41" HorizontalAlignment="Left" Margin="295,134,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FF00536C" FontFamily="Sigmar One" BorderBrush="#FF00536C"/>
+        <CheckBox x:Name="CheckBox42" Checked="CheckBox42_Checked" Unchecked="CheckBox42_Unchecked" Content="42" HorizontalAlignment="Left" Margin="340,131,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FF00536C" FontFamily="Sigmar One" BorderBrush="#FF00536C"/>
+        <CheckBox x:Name="CheckBox43" Checked="CheckBox43_Checked" Unchecked="CheckBox43_Unchecked" Content="43" HorizontalAlignment="Left" Margin="382,131,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FF00536C" FontFamily="Sigmar One" BorderBrush="#FF00536C"/>
+        <CheckBox x:Name="CheckBox44" Checked="CheckBox44_Checked" Unchecked="CheckBox44_Unchecked" Content="44" HorizontalAlignment="Left" Margin="432,131,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FF00536C" FontFamily="Sigmar One" BorderBrush="#FF00536C"/>
+        <TextBox x:Name="TextBox38" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="145,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="Sigmar One" Background="Transparent" BorderBrush="#FF00536C" Foreground="#FF00536C" SelectionBrush="#FF00536C" FontSize="10"/>
+        <TextBox x:Name="TextBox39" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="194,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="Sigmar One" Background="Transparent" BorderBrush="#FF00536C" Foreground="#FF00536C" SelectionBrush="#FF00536C" FontSize="10"/>
+        <TextBox x:Name="TextBox40" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="243,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="Sigmar One" Background="Transparent" BorderBrush="#FF00536C" Foreground="#FF00536C" SelectionBrush="#FF00536C" FontSize="10"/>
+        <TextBox x:Name="TextBox41" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="295,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="Sigmar One" Background="Transparent" BorderBrush="#FF00536C" Foreground="#FF00536C" SelectionBrush="#FF00536C" FontSize="10"/>
+        <TextBox x:Name="TextBox42" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="341,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="Sigmar One" Background="Transparent" BorderBrush="#FF00536C" Foreground="#FF00536C" SelectionBrush="#FF00536C" FontSize="10"/>
+        <TextBox x:Name="TextBox43" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="382,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="Sigmar One" Background="Transparent" BorderBrush="#FF00536C" Foreground="#FF00536C" SelectionBrush="#FF00536C" FontSize="10"/>
+        <TextBox x:Name="TextBox44" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="432,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="Sigmar One" Background="Transparent" BorderBrush="#FF00536C" Foreground="#FF00536C" SelectionBrush="#FF00536C" FontSize="10"/>
+
+        <Grid x:Name="GRID_PessoaFisica" HorizontalAlignment="Left" Height="106" Margin="10,304,0,0" VerticalAlignment="Top" Width="773">
+            <Button Click="BTN_SalvarPedidoParaPessoaFisica" Content="Salvar" HorizontalAlignment="Right" Margin="0,66,50,0" VerticalAlignment="Top" Width="81" Background="#00DDDDDD" BorderBrush="#0000536C" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+            <ComboBox x:Name="cboClientesPessoaFisica" HorizontalAlignment="Left" Margin="133,0,0,0" VerticalAlignment="Top" Width="640" BorderBrush="#FF00536C" Foreground="#FF00536C">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#00E5E5E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+        </Grid>
+        <Grid x:Name="GRID_PessoaJuridica" Visibility="Hidden" HorizontalAlignment="Left" Height="106" Margin="10,304,0,0" VerticalAlignment="Top" Width="773">
+            <Button Click="BTN_SalvarPedidoParaPessoaJuridica" Content="Salvar" HorizontalAlignment="Right" Margin="0,66,50,0" VerticalAlignment="Top" Width="86" Background="#00DDDDDD" BorderBrush="#0000536C" Foreground="#FF00536C" FontFamily="Sigmar One" FontSize="16"/>
+            <ComboBox x:Name="cboClientesPessoaJuridica" HorizontalAlignment="Left" Margin="133,0,0,0" VerticalAlignment="Top" Width="630" BorderBrush="#FF00536C" Foreground="#FF00536C">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#00E5E5E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+        </Grid>
+
+
+    </Grid>
+</Window>
